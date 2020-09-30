@@ -1,36 +1,130 @@
 <!DOCTYPE html>
-<html>
-  
-  <head>
+<html lang="en" dir="ltr">
+<head>
     <meta charset="utf-8">
-    <!-- Title -->
-    <title>Unit 1 Applied Assignment</title>
-    
-    <!-- Styles go here in the head section -->   
-    <style> 
-        body {
-            background-color: #F7F7FF;
-            margin: 0 10%;
-            font-family: sans-serif;
-             }
-        h1 {
-            text-align: center;
-            font-family: serif;
-            font-weight: normal;
-            margin-top: 30px;
-           }
-        p, h2 {
-          text-align: left;
-          margin-top: 20px;
-          }
+    <title>Class Project Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+    /*     body     */
+body {
+    background-image: url(images/bggradient.png);
+    background-position: top center;
+    background background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*     header     */
+
+header{
+    margin: 100px 0 100px 0;
+    text-align: center;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+}
+
+/*    List items    */
+li {
+    list-style: none;
+}
+
+/*    work    */
+.work{
+    text-align: center;
+    width: 100%;
+}
+
+.work img{
+    margin: 1%;
+    width: 40%;
+}
+
+/*    work2    */
+.work2 {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
+
+.work2  img{
+    margin: 1%;
+    width: 60%;
+    height: 90%;
+}
+
+
+/*     footer     */
+
+footer {
+    text-align: center;
+    width: 90%;
+    margin: 60px auto;
+}
+
+footer p {
+    color: grey;
+}
     </style>
-  </head>
-  
-  <!-- Page Content goes in the body tags -->
-  <body> 
-    <h1> Hello Class </h1>
-    <h2>This is my project portfolio area</h2>
-    <p>Portfolio information goes here</p>
-  </body>
-  
- </html>
+</head>
+    <body>
+        
+   <div>
+       <!-- Navigation area -->
+       
+       <nav> 
+           <p>Scott Owen</p>
+       </nav>
+       
+        <!--   header   -->
+       
+        <header>
+            <h1>Class Portfolio</h1>
+            <p>CPT422 Class Projects</p>
+        </header>
+       
+         <!--   Images of Class work  -->
+        
+        <div class="work">
+            <img src="images/image4.png" alt="placeholder image">
+            <img src="images/image4.png" alt="placeholder image">
+        </div>
+       
+        <!--   About section   -->  
+        
+        <div class="about-section">
+            <h3>About Me</h3>
+            <ul> 
+                <li>UI Design</li>   
+                <li>App Development</li>
+                <a href="https://www.emanueleferonato.com"><li>Web Development</li></a>
+                <a href="https://expertvagabond.com/photography/"><li>Photography</li></a>
+                <a href="http://sxsblog.com"><li>Offroad Powersports</li></a>
+            </ul>
+            
+            <p>I'm a structural maintainer by trade and for the last year and a half i've been a (QA) Quality Assurance inspector. What drew me to pursuing a computer programming degree other than rank progression..is i've always been fascinated with being able to make something with a computer wether it be a website or an appliation I love it. Although being sort of computer savy has its downfalls, for instance when a friend or coworker assumes you can fix whatever issue they are having. I would like to have my computer hobby potentially turn from a hobby into a part time job/full time job and i'm looking forward to this class.</p>
+            &nbsp;
+            <p>When i'm not at work I can be found messing around on my computer when an idea strikes. I also really enjoy offroad powersports such as UTV's. As seen below is a picture from a recent trip i took to Windrock Park in Tennessee. I also enjoy anything outdoors kayaking, camping, photography, shooting. I do enjoy playing video games such as Rocket League, Call of Duty and the like. Below are also some screen shots of some applications i've developed but never published..maybe one day.</p>
+            
+        </div>
+       
+       <!--   larger images section / personal work     -->
+       
+        <div class="work2">
+            <img src="images/image3.png" alt="image of something">
+            <img src="images/image1.png" alt="image of something">
+            <img src="images/image2.png" alt="image of something">
+        </div>
+       
+       
+       <!--   Footer    -->
+        <footer>
+            <p>&#169 Owen Designs</p>
+        </footer>
+       
+    </div>
+    
+    </body>
+</html>
