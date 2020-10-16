@@ -1,98 +1,148 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-
-
-/*     body     */
 body {
+  font-family: Arial, Helvetica, sans-serif;
     background-image: url(../images/bggradient.png);
-    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
-nav a{
-    text-decoration: none;
+/* endable this to add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+} 
+
+/* Style the header */
+header {
+  background-color: #47c5d6;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.back {
+    float: left;
+    display: block;
 }
 
 h1 {
     text-align: center;
 }
 
-header {
-    margin-top: 2em;
-    height: 3em;
+/* Style the navigation menu */
+nav {
+  flex: 1;
+  padding: 20px;
+}
+
+/* div h2 font */
+div h2{
+    font-size: 25px;
+}
+
+/* div p font */
+div p {
+    font-size: 15px;
+}
+
+/* Container for flexboxes */
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
     text-align: center;
-    vertical-align: middle;
-    margin-bottom: 2em;
-    display: block;
-    background-color: #47c5d6;
+    justify-content: center;
+    /*align-items: center; */
 }
 
-div {
-    padding-bottom: 2em;
+.flex_item-left {
+  padding: 10px;
+  flex: 50%;
 }
 
-.images {
-    margin: auto;
-    display: inline-flex;
-    width: 45%;
+.flex_item-left img {
+    padding-bottom: 10px;
+    width: 313px;
+    height: 313px;
+}
+
+
+.flex_item-right {
+    padding: 10px;
+    flex: 50%;
+}
+
+.mrgn {
+    height: 313px;
+}
+
+.mrgn p{
+    padding-left: 3px;
+    text-align: left;
+}
+
+.vid {
     text-align: center;
+    padding-bottom: 20px;
 }
 
-.steps h3{
-    text-align: center;
-    
-    padding-right: 50px;
-}
-
-.steps {
-    padding-top: 15%;
-    float: right;
-    display: inline-flex;
-    width: 50%;
-}
-
-.steps p{
-    padding-top: 6px;
-    padding-left: 20px;
-}
-
-img {
-    border-radius: 8px;
-    width: 85%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-p {
-    display: inline-block;
-    float: right;
-}
-
-video {
-    border-radius: 10px;
-    display: block;
-}
-
-/*     footer     */
-
+/* Style the footer */
 footer {
+  padding: 10px;
+  text-align: center;
+  color: gray;
+}
+
+/* makes a one column-layout instead of two-column layout */
+@media (max-width: 600px) {
+    
+    .flex_container {
+        flex-direction: column;
+        flex: 100%;
+    }
+    
+    .flex_item-left img:hover {
+        transform: scale(1.04);
+        opacity: .7;
+        overflow: hidden;
+    }
+    
+  }
+
+/* displays larger than 1200 px keep two column layout */
+
+@media (min-width: 800px){
+   /* Container for flexboxes */
+.flex_container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 30px;
     text-align: center;
-    margin: auto;
-    width: 60%;
+    justify-content: center;
+    /*align-items: center; */
 }
 
-footer p {
-    color: grey;
+.flex_item-left {
+  padding: 10px;
+  flex: 35%;
 }
 
-video {
-    margin: auto;
+.flex_item-right {
+    padding: 10px;
+    flex: 65%;
 }
+    
+.mrgn h2 { 
+    text-align: left;
+}
+
+   
+}
+
+
+
+
