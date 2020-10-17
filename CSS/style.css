@@ -76,6 +76,10 @@ li {
     width: 100%;
 }
 
+.muffin {
+    width: 480px;
+    height: 320px;
+}
 .work img{
     border-radius: 6px;
     margin: 1%;
