@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"> 
+    
+<head>    
+<meta charset="utf-8">
+<title>Password</title> 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+    
+<!-- Ios specific -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HomeApp">
+<link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+<link rel="apple-touch-startup-image" href="launch.png">
+    
+<!-- iPhone X, Xs (1125 px x 2436) launch image -->
+<link rel="apple-touch-startup-image" media="device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="apple-launch-1125x2436.png">
+    
+</head>
+    
+<body class="fullscreen">
+    
+    <div class="header">
+        <h1>House App</h1>
+        <h4 id="time"></h4>
+    </div>
+    
+<div class="grid-container">
+    
+    <div class="grid-item">
+        <div class="app-icon"><i class="fas fa-house-user icon"></i></div>
+        <div class="icon-text">
+            <h3>House Rules</h3>  
+        </div>
+    </div>
+    
+    <div class="grid-item">
+        <div class="app-icon"><i class="fas fa-video icon"></i></div>
+        <div class="icon-text">
+            <h3>Surveillance</h3>  
+        </div>
+    </div>
+        
+    <div class="grid-item">
+        <div class="app-icon"><i class="fas fa-book icon"></i></div>
+        <div class="icon-text">
+            <h3>Recipes</h3>  
+        </div>
+    </div>  
+    
+     <div class="grid-item">
+        <div class="app-icon"><i class="fas fa-lock icon"></i></div>
+        <div class="icon-text">
+            <h3>Password</h3>  
+        </div>
+    </div> 
+    
+     <div class="grid-item">
+        <div class="app-icon"><i class="far fa-list-alt icon"></i></div>
+        <div class="icon-text">
+            <h3>To-Do's</h3>  
+        </div>
+    </div> 
+    
+     <div class="grid-item">
+        <div class="app-icon"><i class="fas fa-shopping-cart icon"></i></div>
+        <div class="icon-text">
+            <h3>Groceries</h3>  
+        </div>
+    </div> 
+    
+</div>
+    
+
+        
+<script>
+var dt = new Date();
+var date = dt.getHours() + ":" + dt.getMinutes();
+document.getElementById("time").innerHTML = date.toLocaleString();
+</script>
+<script src="app.js"></script>
+        
+</body>
+</html>
+
