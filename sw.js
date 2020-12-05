@@ -6,7 +6,7 @@ const assets = [
   'style.css',
   'pages/password/password.html',
   'pages/password/style.css',
-  'js/main.js'
+  'pages/password/js/main.js'
 ];
 
 // cache size limit function
