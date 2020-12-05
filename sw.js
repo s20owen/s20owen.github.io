@@ -3,7 +3,10 @@ const dynamicCacheName = 'site-dynamic-v1';
 const assets = [
   'index.html',
   'app.js',
-  'style.css'
+  'style.css',
+  'pages/password/password.html',
+  'pages/password/style.css',
+  'js/main.js'
 ];
 
 // cache size limit function
