@@ -1,13 +1,15 @@
-const staticCacheName = 'site-static-v2';
-const dynamicCacheName = 'site-dynamic-v1';
+const staticCacheName = 'site-static-v2.2';
+const dynamicCacheName = 'site-dynamic-v1.2';
 const assets = [
   '/',
+  '/pages',
+  '/pages/password',
   'index.html',
   'app.js',
   'style.css',
   'pages/password/password.html',
-  'pages/password/style.css',
-  'pages/password/js/main.js'
+  'pages/password/main.js',
+  'pages/password/style.css'
 ];
 
 // cache size limit function
@@ -61,7 +63,7 @@ self.addEventListener('fetch', evt => {
       });
     }).catch(() => {
       if(evt.request.url.indexOf('.html') > -1){
-        return caches.match('pages/fallback.html');
+        return caches.match('pages/password/password.html');
       } 
     })
   );

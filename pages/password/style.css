@@ -98,8 +98,6 @@ h1{
 
 .disclaimer {
     text-align: center;
-    bottom: 0;
-    position: absolute;
     margin-bottom: 3rem;
     padding: 0 1rem;
 }
@@ -135,14 +133,14 @@ h1{
 footer {
     width: 100vw;
     height: 40px;
-    bottom: 0;
-    position: absolute;
+    /*bottom: 0;
+    position: absolute;*/
     text-align: center;
     line-height: 40px;
     background-color: dodgerblue;
 }
-/* bars button */
 
+/* bars button */
 .bars:active {
     color: #eee;
 }
