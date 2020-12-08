@@ -18,7 +18,17 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.home_icon {
+    cursor: pointer;
+    font-size: 2rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: white;
 }
 
 /*set position to left or right and position to aboslute to make it stay there*/

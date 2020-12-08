@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"> 
+    
+<head>    
+<meta charset="utf-8">
+<title>Home App</title> 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Ios specific -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HomeApp">
+    
+</head>
+    
+<body class="fullscreen">
+    
+    <div class="header">
+        <a href="../../index.html"><i class="fas fa-home home_icon"></i></a>
+        <h1>Recipes</h1>
+    </div> 
+
+    <div class="card_container">
+        
+        <div class="card">
+            <i class="fas fa-cookie img_icon"></i>
+            <h2>Chicken and Dumplings</h2>
+            <p>ingredients: Chicken breast..etc</p>
+            <i class="fas fa-trash trash" onclick="myFunction()"></i>
+        </div>
+        
+        <div class="card">
+            <i class="fas fa-cookie img_icon"></i>
+            <h2>Turkey Tacos</h2>
+            <p>ingredients: Chicken breast..etc</p>
+            <i class="fas fa-trash trash" onclick="myFunction()"></i>
+        </div>
+        
+        <div class="card">
+            <i class="fas fa-cookie img_icon"></i>
+            <h2>Butter Milk Pancakes</h2>
+            <p>ingredients: Flour, Butter..etc</p>
+            <i class="fas fa-trash trash" onclick="myFunction()"></i>
+        </div>
+        
+    </div>
+      
+<script>
+    function myFunction() {
+        if (confirm("Are you sure you want to delete?")){
+            // confirm was pressed delete something
+        }
+        else {
+            // cancelled do nothing.
+        }
+    }
+</script> 
+    
+</body>
+</html>
+
