@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v2.3';
-const dynamicCacheName = 'site-dynamic-v1.3';
+const staticCacheName = 'site-static-v2.4';
+const dynamicCacheName = 'site-dynamic-v1.4';
 const assets = [
   '/',
   '/pages',
@@ -11,7 +11,9 @@ const assets = [
   'pages/password/main.js',
   'pages/password/style.css',
   'pages/To-Dos/todo.html',
-  'pages/To-Dos/style.css'
+  'pages/To-Dos/style.css',
+  'pages/rules/rules.html',
+  'pages/rules/styel.css'
 ];
 
 // cache size limit function
