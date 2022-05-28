@@ -17,6 +17,30 @@
     transition: 0.5s;
 }
 
+.close-div{
+    right: 0;
+    margin-right: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    margin-top: 10px;
+    background-color: orangered;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.close-div a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    align-items: center;
+}
+
+
+
 .modal-container{
     width: 90%;
     height: 90%;
@@ -25,8 +49,6 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    
-    /*background-color: aliceblue;*/
 }
 
 .modal-div{
