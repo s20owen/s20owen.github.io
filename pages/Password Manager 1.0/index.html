@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Manger 1.0</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="modal.css">
+        <link rel="stylesheet" href="sidenav.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    </head>
+    <body>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <input type="file" id="jsonfileinput"/>
+        </div>
+        
+        <div class="wrapper">
+        
+            <!-- Navigation -->
+            <nav>
+                <div class="hamburger" onclick="openNav()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                
+                <div class="profile">
+                    <img src="images/profile.png">
+                </div>
+            </nav>
+            
+            
+            <!-- items -->
+            <div class="content" id="cont">
+                <!--
+                <div class="item" id="card">
+
+                    <div id="img-holder">
+                        <img src="images/profile.png">
+                    </div>
+                    
+                    <div id="card-text">
+                        <h2 id="title">Google</h2>
+                        <p id="website">www.google.com</p>
+                    </div>
+                    
+                    <div id="card-icon">
+                        <i class="fa-solid fa-copy"></i>
+                    </div>
+
+                </div>
+            -->
+                
+            </div>
+            
+            <!-- Button -->
+            
+            <div class="button" id="myBtn" onclick="openModal()">
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            
+        
+        </div> <!-- end wrapper -->
+        
+          <!-- Popup -->
+            
+            <div class="modal" id="myModal">
+                <div class="modal-container">
+                    
+                    <div class="modal-div">
+                        <label class="modal-label">Title:</label>
+                        <input type="text" placeholder="Enter title..." id="-title" name="title" class="modal-input"><br>
+                    </div>
+                    
+                    <div class="modal-div">
+                        <label  class="modal-label">Website:</label>
+                        <input type="text" placeholder="Enter website..." id="-website" name="website" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Email/Username:</label>
+                        <input type="text" placeholder="Enter email/username..." id="-username" name="username" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Password:</label>
+                        <input type="text" placeholder="Enter password..." id="-password" name="password" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Notes:</label>
+                        <input type="text" placeholder="Enter notes..." id="-notes" name="notes" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-button">
+                        <p>Generate Password</p>
+                    </div>
+                    <div class="modal-button" onclick="addItem()">
+                        <p>Save</p>
+                    </div>
+                </div>
+            
+            </div>
+          <!-- end popup -->
+        
+        <script src="index.js"></script>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    </body>
+</html>
