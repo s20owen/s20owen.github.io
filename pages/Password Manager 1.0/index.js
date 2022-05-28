@@ -122,7 +122,7 @@ function addItem(){
     icon.classList.add('fa-solid', 'fa-copy');
                 
                 
- 	img.src = "https://logo.clearbit.com/" + counter.title +".com";
+ 	img.src = "https://logo.clearbit.com/" + document.getElementById("-title").value + ".com";
         img.height = 50;
         img.width = 50;
                 
