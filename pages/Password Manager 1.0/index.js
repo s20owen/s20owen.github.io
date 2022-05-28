@@ -44,9 +44,15 @@ window.addEventListener('load', () => {
                 icon.classList.add('fa-solid', 'fa-copy');
                 
                 
-                img.src = "images/profile.png";
+                img.src = "https://logo.clearbit.com/" + counter.title +".com";
                 img.height = 50;
                 img.width = 50;
+                
+                img.addEventListener('error', function handleError() {
+                    var defaultImage  = "images/profile.png";
+                    img.src = defaultImage;
+                });
+                
                 
                 cont.appendChild(card);
                 card.appendChild(imgHolder);
@@ -116,9 +122,15 @@ function addItem(){
     icon.classList.add('fa-solid', 'fa-copy');
                 
                 
-    img.src = "images/profile.png";
-    img.height = 50;
-    img.width = 50;
+ 	img.src = "https://logo.clearbit.com/" + counter.title +".com";
+        img.height = 50;
+        img.width = 50;
+                
+        img.addEventListener('error', function handleError() {
+             var defaultImage  = "images/profile.png";
+             img.src = defaultImage;
+        });
+                
                 
     cont.appendChild(card);
     card.appendChild(imgHolder);
