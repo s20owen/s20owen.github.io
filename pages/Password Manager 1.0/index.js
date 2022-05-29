@@ -126,6 +126,10 @@ function cardClicked(){
     im.src = "https://logo.clearbit.com/" + this.title +".com";
     im.width = 50;
     im.height = 50;
+    im.addEventListener('error', function handleError() {
+         var defaultImage  = "images/profile.png";
+         im.src = defaultImage;
+    });
     document.getElementById("tit").innerHTML = this.title;
     document.getElementById("pass").innerHTML = this.password;
     document.getElementById("user").innerHTML = this.username;
