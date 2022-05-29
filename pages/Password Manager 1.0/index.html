@@ -17,6 +17,7 @@
             <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">About</a>
             <input type="file" id="jsonfileinput"/>
+            <a href="#" id="export">Download/Export</a>
         </div>
         
         <div class="wrapper">
@@ -65,7 +66,35 @@
         
         </div> <!-- end wrapper -->
         
-          <!-- Popup -->
+        <!-- Item details popup -->
+        <div class="details-container" id="details-container">
+            <div class="details-item">
+                <img id="image">
+                <h2 id="tit">Title</h2>
+            </div>
+            <div class="details">
+                <div class="left">
+                    <p>Username:</p>
+                    <p>Password:</p>
+                    <p>Website:</p>
+                    <p>Email:</p>
+                    <p>Notes:</p>
+                </div>
+                <div>
+                    <p id="user">the username</p>
+                    <p id="pass">password</p>
+                    <p id="web">website</p>
+                    <p id="ema">email</p>
+                    <p id="no">notes</p>
+                </div>
+                
+            </div>
+            <div class="details-button" onclick="closeDetails()">
+                <p>Close</p>
+            </div>
+        </div>
+        
+          <!-- Add new Item Popup -->
             
             <div class="modal" id="myModal">
                 
