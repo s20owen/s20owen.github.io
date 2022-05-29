@@ -154,6 +154,8 @@ function addItem(){
     
     var card = document.createElement('div');
     card.classList.add('item'); // Card container
+	
+    card.addEventListener('click', cardClicked);
           
     var imgHolder = document.createElement('div');
     var img = document.createElement('img');
