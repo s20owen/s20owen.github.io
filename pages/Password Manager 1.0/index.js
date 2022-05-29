@@ -99,7 +99,7 @@ window.addEventListener('load', () => {
                     
 
 function openModal(){
-    document.getElementById("myModal").style.height = "90%";
+    document.getElementById("myModal").style.height = "100%";
 }
 
 function closeModal(){
