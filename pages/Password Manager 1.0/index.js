@@ -139,6 +139,17 @@ function closeDetails(){
     document.getElementById("details-container").style.display = "none";
 }
 
+function exportFile(){
+    json_List[property] = data;
+    var data_string = JSON.stringify(json_List);
+    var file = new Blob([data_string], {type:"text"});
+    var anchor = document.createElement("a");
+    anchor.href = window.URL.createObjectURL(file);
+    anchor.download = "items.json";
+    anchor.click();
+    closeNav();
+}
+
 function addItem(){
     
     var card = document.createElement('div');
