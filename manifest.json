@@ -4,14 +4,6 @@
   "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "shortcuts": [
-    {
-      "name": "Open Password Generator",
-      "short_name": "Pass Gen",
-      "description": "Open password generator",
-      "url": "/pages/password/password.html",
-    }
-   ],
   "icons": [
     {
       "src": "/img/icons/icon-72x72.png",
@@ -53,5 +45,19 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+   "shortcuts": [
+    {
+      "name": "Open Password Generator",
+      "short_name": "Pass Gen",
+      "description": "Open password generator",
+      "url": "/pages/password/password.html",
+      "icons": [
+        {
+          "src": "/img/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+   ]
 }
