@@ -4,6 +4,14 @@
   "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
+  "shortcuts": [
+    {
+      "name": "Open Password Generator",
+      "short_name:" "Pass Gen",
+      "description": "Open password generator",
+      "url": "https://s20owen.github.io/pages/password/password.html",
+    }
+   ],
   "icons": [
     {
       "src": "/img/icons/icon-72x72.png",
