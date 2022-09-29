@@ -9,7 +9,7 @@
       "name": "Open Password Generator",
       "short_name": "Pass Gen",
       "description": "Open password generator",
-      "url": "https://s20owen.github.io/pages/password/password.html",
+      "url": "/pages/password/password.html",
     }
    ],
   "icons": [
