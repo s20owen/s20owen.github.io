@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v2.5';
-const dynamicCacheName = 'site-dynamic-v1.5';
+const staticCacheName = 'site-static-v2.6';
+const dynamicCacheName = 'site-dynamic-v1.6';
 const assets = [
   '/',
   '/pages',
@@ -13,7 +13,8 @@ const assets = [
   'pages/To-Dos/todo.html',
   'pages/To-Dos/style.css',
   'pages/rules/rules.html',
-  'pages/rules/style.css'
+  'pages/rules/style.css',
+  'pages/dropd/index.html'
 ];
 
 // cache size limit function
@@ -61,7 +62,7 @@ self.addEventListener('fetch', evt => {
         return caches.open(dynamicCacheName).then(cache => {
           cache.put(evt.request.url, fetchRes.clone());
           // check cached items size
-          limitCacheSize(dynamicCacheName, 15);
+          limitCacheSize(dynamicCacheName, 30);
           return fetchRes;
         })
       });
