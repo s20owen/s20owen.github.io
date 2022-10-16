@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Manger 1.0</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="modal.css">
+        <link rel="stylesheet" href="sidenav.css">
+        <link rel="stylesheet" href="details.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    </head>
+    <body>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <input type="file" id="jsonfileinput"/>
+            <a href="#" id="export">Download/Export</a>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="hamburger" onclick="openNav()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <div class="profile">
+                <img src="images/profile.png">
+            </div>
+        </nav>
+        
+        <div class="wrapper">
+            
+            
+            <!-- items -->
+            <div class="content" id="cont">
+                <!--
+                <div class="item" id="card">
+
+                    <div id="img-holder">
+                        <img src="images/profile.png">
+                    </div>
+                    
+                    <div id="card-text">
+                        <h2 id="title">Google</h2>
+                        <p id="website">www.google.com</p>
+                    </div>
+                    
+                    <div id="card-icon">
+                        <i class="fa-solid fa-copy"></i>
+                    </div>
+
+                </div>
+            -->
+                
+            </div>
+            
+            <!-- Button -->
+            
+            <div class="button" id="myBtn" onclick="openModal()">
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            
+        
+        </div> <!-- end wrapper -->
+        
+        <!-- Item details popup -->
+        <div class="details-container" id="details-container">
+            <div class="details-item">
+                <img id="image">
+                <h2 id="tit">Title</h2>
+            </div>
+            <div class="details">
+                <div class="left">
+                    <p>Username:</p>
+                    <p>Password:</p>
+                    <p>Website:</p>
+                    <p>Email:</p>
+                    <p>Notes:</p>
+                </div>
+                <div>
+                    <p id="user">the username</p>
+                    <p id="pass">password</p>
+                    <p id="web">website</p>
+                    <p id="ema">email</p>
+                    <p id="no">notes</p>
+                </div>
+                
+            </div>
+            <div class="details-button" onclick="closeDetails()">
+                <p>Close</p>
+            </div>
+        </div>
+        
+          <!-- Add new Item Popup -->
+            
+            <div class="modal" id="myModal">
+                <div class="close-div">
+                    <a href="#" class="closebtn" onclick="closeModal()">&times</a>
+                </div>
+                <div class="modal-container">
+                   
+                    <div class="modal-div">
+                        <label class="modal-label">Title:</label>
+                        <input type="text" placeholder="Enter title..." id="-title" name="title" class="modal-input"><br>
+                    </div>
+                    
+                    <div class="modal-div">
+                        <label  class="modal-label">Website:</label>
+                        <input type="text" placeholder="Enter website..." id="-website" name="website" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Username:</label>
+                        <input type="text" placeholder="Enter username..." id="-username" name="username" class="modal-input"><br>
+                    </div>
+                    
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Password:</label>
+                        <input type="text" placeholder="Enter password..." id="-password" name="password" class="modal-input"><br>
+                    </div>
+                    
+                     <div class="modal-div">
+                        <label class="modal-label">Email:</label>
+                        <input type="text" placeholder="Enter email..." id="-email" name="email" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-div">
+                        <label class="modal-label">Notes:</label>
+                        <input type="text" placeholder="Enter notes..." id="-notes" name="notes" class="modal-input"><br>
+                    </div>
+                
+                    <div class="modal-button">
+                        <p>Generate Password</p>
+                    </div>
+                    <div class="modal-button" onclick="addItem()">
+                        <p>Save</p>
+                    </div>
+                </div>
+            
+            </div>
+          <!-- end popup -->
+        
+        <script src="index.js"></script>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    </body>
+</html>
