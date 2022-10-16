@@ -138,6 +138,7 @@ function exportFile(){
     var data_string = JSON.stringify(json_List);
     var file = new Blob([data_string], {type:"text"});
     var anchor = document.createElement("a");
+    anchor.setAttribute('download', file);	
     anchor.href = window.URL.createObjectURL(file);
     anchor.download = "items.json";
     anchor.click();
