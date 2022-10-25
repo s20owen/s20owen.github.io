@@ -9,3 +9,18 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+
+
+// PWA app badging https://web.dev/badging-api/
+// Set the badge
+const unreadCount = 1;
+navigator.setAppBadge(unreadCount).catch((error) => {
+  //Do something with the error.
+});
+
+// Clear the badge
+/* 
+navigator.clearAppBadge().catch((error) => {
+  // Do something with the error.
+});
+*/
