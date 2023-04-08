@@ -41,7 +41,7 @@
 
 @supports (padding-top: env(safe-area-inset-top)) {
     .sidenav {
+    padding-top: 3rem;
       --safe-area-inset-top: env(safe-area-inset-top);
-      height: calc(100% + var(--safe-area-inset-top));
     }
 }
