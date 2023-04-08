@@ -147,16 +147,25 @@ function exportFile(){
 */
 // chat GPT code
 function exportFile(){
-    json_List[property] = data;
-    var data_string = JSON.stringify(json_List);
-    var file = new Blob([data_string], {type:"text"});
-    var anchor = document.createElement("a");
-    anchor.href = window.URL.createObjectURL(file);
-    anchor.download = "items.json";
-    document.body.appendChild(anchor); // Append the anchor element to the DOM
-    anchor.dispatchEvent(new MouseEvent('click')); // Trigger the download
-    document.body.removeChild(anchor); // Remove the anchor element from the DOM
-    closeNav();
+  json_List[property] = data;
+  var data_string = JSON.stringify(json_List);
+  var file = new Blob([data_string], {type:"text/plain"});
+  if (window.navigator.msSaveOrOpenBlob) { // IE10+
+    window.navigator.msSaveOrOpenBlob(file, 'items.json');
+  } else { // Other browsers
+    var url = window.URL.createObjectURL(file);
+    var a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    a.download = 'items.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function() {
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }, 0);
+  }
+  closeNav();
 }
 
 function addItem(){
