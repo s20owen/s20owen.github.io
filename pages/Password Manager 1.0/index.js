@@ -168,6 +168,15 @@ function exportFile() {
     document.body.appendChild(a);
     a.click();
     closeNav();
+  
+    // Show message to manually download file if automatic download doesn't start
+    setTimeout(function() {
+      if (!document.webkitHidden && window.navigator.userAgent.indexOf('Safari') !== -1) {
+        if (confirm('The download may have failed due to Safari restrictions. Do you want to manually download the file?')) {
+          window.location.href = fileURL;
+        }
+      }
+    }, 3000);
   }
 
 function addItem(){
