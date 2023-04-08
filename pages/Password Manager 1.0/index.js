@@ -149,7 +149,7 @@ function exportFile(){
 function exportFile() {
     json_List[property] = data;
     var data_string = JSON.stringify(json_List);
-    var file = new Blob([data_string], {type: 'application/json'});
+    var file = new Blob([data_string], {type: 'application/octet-stream'});
     var fileURL = window.URL.createObjectURL(file);
     var a = document.createElement('a');
     a.href = fileURL;
@@ -168,16 +168,8 @@ function exportFile() {
     document.body.appendChild(a);
     a.click();
     closeNav();
-  
-    // Show message to manually download file if automatic download doesn't start
-    setTimeout(function() {
-      if (!document.webkitHidden && window.navigator.userAgent.indexOf('Safari') !== -1) {
-        if (confirm('The download may have failed due to Safari restrictions. Do you want to manually download the file?')) {
-          window.location.href = fileURL;
-        }
-      }
-    }, 3000);
   }
+  
 
 function addItem(){
     
