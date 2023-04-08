@@ -146,27 +146,29 @@ function exportFile(){
 }
 */
 // chat GPT code
-function exportFile(){
-  json_List[property] = data;
-  var data_string = JSON.stringify(json_List);
-  var file = new Blob([data_string], {type:"text/plain"});
-  if (window.navigator.msSaveOrOpenBlob) { // IE10+
-    window.navigator.msSaveOrOpenBlob(file, 'items.json');
-  } else { // Other browsers
-    var url = window.URL.createObjectURL(file);
+function exportFile() {
+    json_List[property] = data;
+    var data_string = JSON.stringify(json_List);
+    var file = new Blob([data_string], {type: 'application/json'});
+    var fileURL = window.URL.createObjectURL(file);
     var a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
+    a.href = fileURL;
     a.download = 'items.json';
+  
+    var clickHandler = function() {
+      setTimeout(function() {
+        URL.revokeObjectURL(fileURL);
+        this.removeEventListener('click', clickHandler);
+        document.body.removeChild(a);
+      }, 150);
+    };
+  
+    a.addEventListener('click', clickHandler, false);
+    a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
-    setTimeout(function() {
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
-    }, 0);
+    closeNav();
   }
-  closeNav();
-}
 
 function addItem(){
     
