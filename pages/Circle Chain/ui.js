@@ -32,7 +32,9 @@ function showHomeScreen() {
 }
 
 function showLevelSelect() {
-  const levelScreen = document.createElement('div');
+  document.getElementById("overlay")?.remove();
+  canvas.style.display = "block";
+const levelScreen = document.createElement('div');
   levelScreen.id = 'level-screen';
   levelScreen.style.position = 'absolute';
   levelScreen.style.top = 0;
@@ -78,7 +80,7 @@ function showLevelSelect() {
 
     btn.onclick = () => {
       document.body.removeChild(levelScreen);
-      const game = new Game(canvas, LEVELS[index], index);
+      const game = new Game(canvas, LEVELS, index);
       game.gameLoop();
     };
 

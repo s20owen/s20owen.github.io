@@ -1,5 +1,5 @@
 class Circle {
-  constructor(x, y, dx, dy, color, type = 'red', radius = 20) {
+  constructor(x, y, dx, dy, color, type = 'red', radius = 15) {
     this.x = x;
     this.y = y;
     this.dx = dx;

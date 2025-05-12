@@ -1,5 +1,5 @@
 class Projectile {
-  constructor(x, y, angle, color = 'red', speed = 3, lifetime = 100) {
+  constructor(x, y, angle, color = 'red', speed = 3, lifetime = 120) {
     this.x = x;
     this.y = y;
     this.dx = Math.cos(angle) * speed;
